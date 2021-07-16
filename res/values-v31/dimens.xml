@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (C) 2021 The Android Open Source Project
   ~
@@ -14,11 +13,7 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
 <resources>
-    <style name="SectionHeader" parent="@android:style/TextAppearance.Material.Medium">
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
-        <item name="fontFamily">@string/config_fontFamilyMedium</item>
-        <item name="android:textSize">12sp</item>
-    </style>
+    <dimen name="action_bar_elevation">0dp</dimen>
+    <dimen name="action_bar_margin">0dp</dimen>
 </resources>
