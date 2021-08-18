@@ -14,8 +14,11 @@
 -->
 
 <resources>
-  <color name="tab_selected_text_color">@android:color/white</color>
+  <color name="tab_selected_text_color">@android:color/black</color>
+  <color name="tab_default_background_color">
+    @*android:color/system_neutral1_800
+  </color> <!-- neutral 800 -->
   <color name="work_profile_button_stroke_color">
-    @*android:color/system_accent1_600
-  </color> <!-- primary 600 -->
+    @*android:color/system_accent1_200
+  </color> <!-- accent 200 -->
 </resources>
