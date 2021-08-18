@@ -13,18 +13,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources>
+    <style name="EmptyStateTitleText">
+        <item name="android:textColor">@color/empty_state_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@string/config_headerFontFamily</item>
+    </style>
 
-    <!-- Name of the body font family. If empty, falls back to platform default -->
-    <string name="config_fontFamily" translatable="false">sans-serif</string>
-    <!-- Name of the body font family medium. -->
-    <string name="config_fontFamilyMedium" translatable="false">sans-serif-medium</string>
-    <!-- Name of the header font family. If empty, falls back to platform default -->
-    <string name="config_headerFontFamily" translatable="false">@string/config_fontFamily</string>
-    <!-- Name of the header font family medium. -->
-    <string name="config_headerFontFamilyMedium" translatable="false">
-        @string/config_fontFamilyMedium
-    </string>
-
+    <style name="EmptyStateMessageText">
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@string/config_fontFamily</item>
+    </style>
 </resources>
