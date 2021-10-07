@@ -20,12 +20,14 @@ import static androidx.core.util.Preconditions.checkNotNull;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
 import com.android.documentsui.base.RootInfo;
 import com.android.documentsui.base.State;
 import com.android.documentsui.base.UserId;
+import com.android.documentsui.util.VersionUtils;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.common.base.Objects;
@@ -49,6 +51,7 @@ public class ProfileTabs implements ProfileTabsAddons {
     @Nullable
     private Listener mListener;
     private TabLayout.OnTabSelectedListener mOnTabSelectedListener;
+    private View mTabSeparator;
 
     public ProfileTabs(View tabLayoutContainer, State state, UserIdManager userIdManager,
             NavigationViewManager.Environment env,
@@ -61,6 +64,8 @@ public class ProfileTabs implements ProfileTabsAddons {
         mUserIdManager = checkNotNull(userIdManager);
         mTabs.removeAllTabs();
         mUserIds = Collections.singletonList(UserId.CURRENT_USER);
+        mTabSeparator = tabLayoutContainer.findViewById(R.id.tab_separator);
+
         mOnTabSelectedListener = new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -96,6 +101,38 @@ public class ProfileTabs implements ProfileTabsAddons {
             mTabs.addOnTabSelectedListener(mOnTabSelectedListener);
         }
         mTabsContainer.setVisibility(shouldShow() ? View.VISIBLE : View.GONE);
+
+        // Material next changes apply only for version S or greater
+        if(VersionUtils.isAtLeastS()) {
+            mTabSeparator.setVisibility(View.GONE);
+            int tabContainerHeightInDp = (int)mTabsContainer.getContext().getResources().
+                getDimension(R.dimen.tab_container_height);
+            mTabsContainer.getLayoutParams().height = tabContainerHeightInDp;
+            ViewGroup.MarginLayoutParams tabContainerMarginLayoutParams =
+                (ViewGroup.MarginLayoutParams) mTabsContainer.getLayoutParams();
+            int tabContainerMarginTop = (int)mTabsContainer.getContext().getResources().
+                getDimension(R.dimen.profile_tab_margin_top);
+            tabContainerMarginLayoutParams.setMargins(0, tabContainerMarginTop, 0, 0);
+            mTabsContainer.requestLayout();
+            for (int i = 0; i < mTabs.getTabCount(); i++) {
+
+                // Tablayout holds a view that contains the individual tab
+                View tab = ((ViewGroup) mTabs.getChildAt(0)).getChildAt(i);
+
+                // Get individual tab to set the style
+                ViewGroup.MarginLayoutParams marginLayoutParams =
+                        (ViewGroup.MarginLayoutParams) tab.getLayoutParams();
+                int tabMarginSide = (int)mTabsContainer.getContext().getResources().
+                    getDimension(R.dimen.profile_tab_margin_side);
+                marginLayoutParams.setMargins(tabMarginSide, 0, tabMarginSide, 0);
+                int tabHeightInDp = (int)mTabsContainer.getContext().getResources().
+                    getDimension(R.dimen.tab_height);
+                tab.getLayoutParams().height = tabHeightInDp;
+                tab.requestLayout();
+                tab.setBackgroundResource(R.drawable.tab_border_rounded);
+            }
+
+        }
     }
 
     public void setListener(@Nullable Listener listener) {
