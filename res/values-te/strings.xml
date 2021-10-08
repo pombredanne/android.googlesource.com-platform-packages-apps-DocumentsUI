@@ -204,7 +204,7 @@
     <string name="notification_copy_files_converted_title" msgid="6916768494891833365">"కొన్ని పైల్‌లు మార్చబడ్డాయి"</string>
     <string name="open_external_dialog_request" msgid="8173558471322861268">"<xliff:g id="APPNAME"><b>^1</b></xliff:g>కి <xliff:g id="STORAGE"><i>^3</i></xliff:g>లో <xliff:g id="DIRECTORY"><i>^2</i></xliff:g> డైరెక్టరీ యాక్సెస్‌ను మంజూరు చేయాలా?"</string>
     <string name="open_external_dialog_request_primary_volume" msgid="2240992164087948176">"<xliff:g id="APPNAME"><b>^1</b></xliff:g>కి <xliff:g id="DIRECTORY"><i>^2</i></xliff:g> డైరెక్టరీ యాక్సెస్‌ను మంజూరు చేయాలా?"</string>
-    <string name="open_external_dialog_root_request" msgid="6776729293982633">"<xliff:g id="STORAGE"><i>^2</i></xliff:g>లోని ఫోటోలు మరియు వీడియోలతో సహా మీ డేటా యాక్సెస్‌ను <xliff:g id="APPNAME"><b>^1</b></xliff:g>కి మంజూరు చేయాలా?"</string>
+    <string name="open_external_dialog_root_request" msgid="6776729293982633">"<xliff:g id="STORAGE"><i>^2</i></xliff:g>లోని ఫోటోలు, వీడియోలతో సహా మీ డేటా యాక్సెస్‌ను <xliff:g id="APPNAME"><b>^1</b></xliff:g>కి మంజూరు చేయాలా?"</string>
     <string name="allow" msgid="1275746941353040309">"అనుమతించు"</string>
     <string name="deny" msgid="5127201668078153379">"తిరస్కరించు"</string>
     <plurals name="elements_selected" formatted="false" msgid="4448165978637163692">
@@ -251,11 +251,11 @@
     <string name="root_info_header_app_with_summary" msgid="3223302581236069702">"<xliff:g id="LABEL">%1$s</xliff:g> / <xliff:g id="SUMMARY">%2$s</xliff:g>లోని ఫైళ్లు"</string>
     <string name="root_info_header_image_recent" msgid="7494373563753926014">"ఇటీవలి ఇమేజ్‌లు"</string>
     <string name="root_info_header_image_global_search" msgid="7307009823489854697">"ఇమేజ్‌లు"</string>
-    <string name="root_info_header_image_downloads" msgid="7072252612657612307">"\'డౌన్‌లోడ్‌లు\'లోని చిత్రాలు"</string>
-    <string name="root_info_header_image_storage" msgid="5086740886360075930">"<xliff:g id="DEVICE">%1$s</xliff:g>లోని ఫోటోలు"</string>
-    <string name="root_info_header_image_folder" msgid="5980430877636279667">"<xliff:g id="FOLDER">%1$s</xliff:g>లోని చిత్రాలు"</string>
-    <string name="root_info_header_image_app" msgid="4858114210851525359">"<xliff:g id="LABEL">%1$s</xliff:g>లోని ఫోటోలు"</string>
-    <string name="root_info_header_image_app_with_summary" msgid="6404842960923224778">"<xliff:g id="LABEL">%1$s</xliff:g>లోని ఫోటోలు / <xliff:g id="SUMMARY">%2$s</xliff:g>"</string>
+    <string name="root_info_header_image_downloads" msgid="7072252612657612307">"\'డౌన్‌లోడ్‌లు\'లోని ఇమేజ్‌లు"</string>
+    <string name="root_info_header_image_storage" msgid="5086740886360075930">"<xliff:g id="DEVICE">%1$s</xliff:g>లోని ఇమేజ్‌లు"</string>
+    <string name="root_info_header_image_folder" msgid="5980430877636279667">"<xliff:g id="FOLDER">%1$s</xliff:g>లోని ఇమేజ్‌లు"</string>
+    <string name="root_info_header_image_app" msgid="4858114210851525359">"<xliff:g id="LABEL">%1$s</xliff:g>లోని ఇమేజ్‌లు"</string>
+    <string name="root_info_header_image_app_with_summary" msgid="6404842960923224778">"<xliff:g id="LABEL">%1$s</xliff:g>లోని ఇమేజ్‌లు / <xliff:g id="SUMMARY">%2$s</xliff:g>"</string>
     <string name="chip_title_images" msgid="7838299046109841015">"ఇమేజ్‌లు"</string>
     <string name="chip_title_audio" msgid="1032801828748235436">"ఆడియో"</string>
     <string name="chip_title_videos" msgid="7011260091979776447">"వీడియోలు"</string>
@@ -275,7 +275,7 @@
     <string name="directory_blocked_header_subtitle" msgid="2829150911849033408">"మీ గోప్యతను కాపాడుకోవటానికి, మరొక ఫోల్డర్‌ను ఎంచుకోండి"</string>
     <string name="create_new_folder_button" msgid="8859613309559794890">"కొత్త ఫోల్డర్‌ని సృష్టించు"</string>
     <string name="search_bar_hint" msgid="4517366509897977321">"ఈ ఫోన్‌లో వెతకండి"</string>
-    <string name="delete_search_history" msgid="2202015025607694515">"శోధన చరిత్ర <xliff:g id="TEXT">%1$s</xliff:g>ను తొలగించండి"</string>
+    <string name="delete_search_history" msgid="2202015025607694515">"సెర్చ్ హిస్టరీ <xliff:g id="TEXT">%1$s</xliff:g>‌ను తొలగించండి"</string>
     <string name="personal_tab" msgid="3878576287868528503">"వ్యక్తిగత డైరెక్టరీ"</string>
     <string name="work_tab" msgid="7265359366883747413">"కార్యాలయ డైరెక్టరీ"</string>
     <string name="a11y_work" msgid="7504431382825242153">"ఆఫీసు"</string>
